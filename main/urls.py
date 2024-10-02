@@ -8,6 +8,7 @@ from main.views import (
     show_json_by_id,
     edit_mood,
     delete_mood,
+    add_mood_entry_ajax,
 )
 from main.views import register, login_user, logout_user
 
@@ -25,5 +26,6 @@ urlpatterns = [
     path("create-mood-entry", create_mood_entry, name="create_mood_entry"),
     path("xml/<str:id>/", show_xml_by_id, name="show_xml_by_id"),
     path("json/<str:id>/", show_json_by_id, name="show_json_by_id"),
+    path("add-mood-entry-ajax/", add_mood_entry_ajax, name="add_mood_entry_ajax"),
     
 ]
